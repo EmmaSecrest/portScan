@@ -4,13 +4,14 @@ def pingME():
     try:
         ipAdd = ip.ip_address(input("Please enter an ip address: "))
         ipToTest = str(ipAdd)
-        response = os.system('ping -n 1' + ipToTest)
+        response = os.system('ping -n 1 ' + ipToTest)
         if response == 0:
-            print('this works')
+            return True
+
         else:
-            print('this does not work')
+            return False
 
     except ValueError:
         print("Something went wrong.Sorry")
 
-x=pingME()
+
