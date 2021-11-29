@@ -1,5 +1,5 @@
 import socket
-# now just need to change open port print to write to a file
+results = open('results.txt', 'w')
 def scanMe(ip,port):
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -10,20 +10,21 @@ def scanMe(ip,port):
     except (TimeoutError, ConnectionRefusedError,OSError):
         return False
     except KeyboardInterrupt:
-        print("Scan has been stopped")
+        results.write("Scan has been stopped")
 
 
 
 def scanSystem(ip):
 
-    for port in range(1, 1025):
+    for port in range(50, 81):
         print(port)
         if scanMe(ip ,port)== True:
-           print(f" {port} is open ")
+           results.write(f"\n {port} is open ")
         else:
             continue
 
 
 
 
- #I know ports 53 80 111 and 443 are open
+
+ #I know ports 53 80 and 443 are open

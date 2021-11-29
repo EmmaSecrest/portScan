@@ -1,5 +1,7 @@
 
 import os
+
+results = open('results.txt', 'w')
 def pingME(ipAdd):
     try:
         ipToTest = str(ipAdd)
@@ -10,6 +12,5 @@ def pingME(ipAdd):
             return False
 
     except ValueError:
-        print("Something went wrong.Sorry")
-
+        results.write("Something went wrong.Sorry")
 

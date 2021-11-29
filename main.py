@@ -5,16 +5,20 @@ from checkingValidIP import pingME
 from portScan import scanSystem
 import ipaddress as ip
 
+results = open('results.txt', 'a')
 dateOfScan = date.today()
 startTime = time.time()
-ipAdd = ip.ip_address(input("Please enter an ip address: "))
+try:
+    ipAdd = ip.ip_address(input("Please enter an ip address: "))
 
-if pingME(ipAdd) == True :
-     scanSystem(ipAdd)
-else:
-    print("Scan could not be completed")
+    if pingME(ipAdd) == True :
+        scanSystem(ipAdd)
+    else:
+        results.write("Scan could not be completed")
+except:
+    pass
 
-print("scan completed in %s seconds" % (time.time() - startTime) , end = ' ' )
-print("on", dateOfScan)
+results.write("Scan completed in %s seconds" % (time.time() - startTime)  )
+results.write("on " + dateOfScan)
 
 # I know ports 53,80,111,and 443 are open
