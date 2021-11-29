@@ -19,6 +19,6 @@ except:
     pass
 
 results.write("Scan completed in %s seconds" % (time.time() - startTime)  )
-results.write("on " + dateOfScan)
+results.write("on {dateOfScan}" )
 
 # I know ports 53,80,111,and 443 are open

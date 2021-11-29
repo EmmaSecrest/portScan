@@ -1,2 +1,2 @@
-Scan completed in 76.51401448249817 seconds 80 is open Scan completed in 75.93449878692627 seconds
- 80 is open 
+
+ 80 is open  in 69.78460693359375 secondson {dateOfScan}
