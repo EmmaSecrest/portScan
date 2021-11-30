@@ -30,4 +30,3 @@ def scanSystem(ip):
 
 
 
- #I know ports 53 80 and 443 are open
