@@ -20,5 +20,4 @@ except:
 
 results.write("\nScan completed in %s seconds" % (time.time() - startTime)  )
 results.write(f"\non {dateOfScan}" )
-
-# I know ports 53,80,111,and 443 are open
+print('Scan is complete. Please open result.txt to see what occured')

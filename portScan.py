@@ -20,8 +20,7 @@ def scanSystem(ip):
     for port in range(startPort, endPort):
         print(port)
         if scanMe(ip ,port)== True:
-            print(f"\n {port} is open")
-            results.write(f"\n {port} is open ")
+           results.write(f"\n {port} is open ")
 
 
 
