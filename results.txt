@@ -1,2 +1,3 @@
 
- 80 is open  in 69.78460693359375 secondson {dateOfScan}
+Scan completed in 29.723285913467407 seconds
+on 2021-11-29

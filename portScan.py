@@ -1,5 +1,5 @@
 import socket
-results = open('results.txt', 'w')
+results = open('results.txt', 'a')
 def scanMe(ip,port):
 
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -15,13 +15,16 @@ def scanMe(ip,port):
 
 
 def scanSystem(ip):
-
-    for port in range(50, 81):
+    startPort  = int(input("Starting port number: "))
+    endPort = int(input("Ending port number: "))
+    for port in range(startPort, endPort):
         print(port)
         if scanMe(ip ,port)== True:
-           results.write(f" {port} is open ")
-        else:
-            continue
+            print(f"\n {port} is open")
+            results.write(f"\n {port} is open ")
+
+
+
 
 
 

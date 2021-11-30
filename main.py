@@ -16,9 +16,9 @@ try:
     else:
         results.write("Scan could not be completed")
 except:
-    pass
+    results.write('\nThe IP address is either invalid or not responding')
 
-results.write("Scan completed in %s seconds" % (time.time() - startTime)  )
-results.write("on {dateOfScan}" )
+results.write("\nScan completed in %s seconds" % (time.time() - startTime)  )
+results.write(f"\non {dateOfScan}" )
 
 # I know ports 53,80,111,and 443 are open
